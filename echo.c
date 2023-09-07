@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "main.h"
 
 /**
  * echo - write string s to stdout
@@ -8,10 +9,9 @@
  */
 int echo(const char *s)
 {
-	int i = 0;
+	int i = _len(s);
 
-	for (; *s; s++)
-		i += write(1, s, 1);
+	write(1, s, i);
 	write(1, "\n", 1);
 
 	return (i);

@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "main.h"
 
 /**
  * echo_err - write string s to stderr
@@ -8,10 +9,9 @@
  */
 int echo_err(const char *s)
 {
-	int i = 0;
+	int i = _len(s);
 
-	for (; *s; s++)
-		i += write(2, s, 1);
+	write(2, s, i);
 	write(2, "\n", 1);
 
 	return (i);

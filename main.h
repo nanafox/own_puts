@@ -3,5 +3,6 @@
 
 int echo(const char *s);
 int echo_err(const char *s);
+int _len(const char *s);
 
 #endif
